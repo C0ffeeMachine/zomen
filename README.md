@@ -22,7 +22,9 @@ I have used [swagger](https://swagger.io/) to prepare this documentation. You ca
 
 ## Results
 
+----
 **Adding user to table User**
+----
 ![markdown logo](https://github.com/C0ffeeMachine/zomen/blob/master/img/Selection_006.png)
 
 
@@ -32,12 +34,12 @@ I have used [swagger](https://swagger.io/) to prepare this documentation. You ca
 ![markdown logo](https://github.com/C0ffeeMachine/zomen/blob/master/img/Selection_007.png)
 
 
-
+----
 **Since there were no users with this specific mobile number thats why ticket was not issued.A user has to be registered to buy tickets.**
+----
 ![markdown logo](https://github.com/C0ffeeMachine/zomen/blob/master/img/Selection_008.png)
 
-----
-----
+
 
 **Successful registration of ticket**
 ![markdown logo](https://github.com/C0ffeeMachine/zomen/blob/master/img/Selection_009.png)
