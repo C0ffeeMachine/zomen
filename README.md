@@ -8,6 +8,7 @@
 * MySQL
 * JPA/Hibernate
 * Rest api
+* Swagger
 
 ## How to run this application
 *Open the project in an editor and run **ZomentumApplication.java***
