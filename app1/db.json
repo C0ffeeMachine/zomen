@@ -1,0 +1,56 @@
+{
+  "ticket": [
+    {
+      "id": 8,
+      "userName": "Yash",
+      "mobNumber": "7565824183",
+      "bookedDate": "2020-08-31",
+      "movieTime": "07:20:00",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "userName": "Yash",
+      "mobNumber": "7565824183",
+      "bookedDate": "2020-08-31",
+      "movieTime": "10:20:00",
+      "status": 1
+    },
+    {
+      "id": 3,
+      "userName": "Hodor",
+      "mobNumber": "7582",
+      "bookedDate": "2020-08-31",
+      "movieTime": "10:20:00",
+      "status": 1
+    },
+    {
+      "id": 9,
+      "userName": "shaka",
+      "mobNumber": "98",
+      "bookedDate": "2020-09-06",
+      "movieTime": "17:20:00",
+      "status": 0
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Yash",
+      "mobNumber": "7565824183",
+      "emailId": "yashshukla195@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Hodor",
+      "mobNumber": "7582",
+      "emailId": "yas195@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Jojo",
+      "mobNumber": "98",
+      "emailId": "jojo195@gmail.com"
+    }
+  ]
+}

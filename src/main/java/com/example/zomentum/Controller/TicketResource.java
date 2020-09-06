@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:3000"})
 public class TicketResource {
 
     private static final Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
@@ -40,12 +41,24 @@ public class TicketResource {
         return ticketRepository.findCount(ld,lt);
     }
 
-    @GetMapping("/tickets/{id}")
+    @GetMapping("/tickets/{id}/user")
     @ApiOperation(value = "An endpoint to view the user's details based on the ticket id.")
     User findUserDetail(@PathVariable int id){
         Ticket t = ticketRepository.findById(id).orElseThrow(()-> new TicketNotFoundException(id));
         User u = userRepository.findUserByMobileNumber(t.getMobNumber());
         return u;
+    }
+
+    @GetMapping(value = "/tickets/{id}")
+    @ApiOperation(value = "Get ticket by id")
+    Ticket getTicketById(@PathVariable int id){
+        return ticketRepository.findById(id).orElseThrow(()-> new TicketNotFoundException(id));
+    }
+
+    @GetMapping(value = "/tickets")
+    @ApiOperation(value = "Get all tickets")
+    List<Ticket> findTickets(){
+        return ticketRepository.findAll();
     }
 
     @PostMapping(value = "/tickets")
@@ -84,7 +97,7 @@ public class TicketResource {
 
     }
 
-    @PatchMapping("/tickets/{id}")
+    @PutMapping("/tickets/{id}")
     @ApiOperation(value = "An endpoint to update a ticket timing based on ticket id.")
     Ticket updateTicket(@PathVariable int id, @RequestBody TicketUpdate ticketUpdate) throws Exception {
         Ticket t = ticketRepository.findById(id).orElseThrow(()-> new TicketNotFoundException(id));
