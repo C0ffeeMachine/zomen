@@ -26,7 +26,7 @@ function AddUser() {
 
     const onSubmit = e =>{
         e.preventDefault()
-        axios.post("http://localhost:8080/users",user) //http://localhost:3005/users
+        axios.post("/users",user) //http://localhost:3005/users
         .then(res =>{
             console.log(res)
             history.push("/viewusers")

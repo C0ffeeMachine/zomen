@@ -34,7 +34,7 @@ function AddTicket() {
 
     const onSubmit = (e) =>{
         e.preventDefault()
-        axios.post("http://localhost:8080/tickets",ticket)
+        axios.post("/tickets",ticket)
         .then(res=>{
             console.log(res.data)
             history.push("/viewtickets")

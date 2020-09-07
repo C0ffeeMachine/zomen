@@ -18,7 +18,7 @@ function User() {
     },[])
 
     const loadUser = ()=>{
-        axios.get("http://localhost:8080/users/"+id) //http://localhost:3005/users
+        axios.get("/users/"+id) //http://localhost:3005/users
         .then(res=>{
             setUser(res.data)
         })

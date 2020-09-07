@@ -14,7 +14,7 @@ function Ticket() {
 
     //http://localhost:3005/ticket?bookedDate=2020-08-31&movieTime=10:20:00
     const loadTicket = ()=>{
-        axios.get("http://localhost:8080/tickets/mt/"+date+"/"+time) //"http://localhost:3005/ticket?bookedDate="+date+"&movieTime="+time
+        axios.get("/tickets/mt/"+date+"/"+time) //"http://localhost:3005/ticket?bookedDate="+date+"&movieTime="+time
         .then(res=>{
             setTicket(res.data)
         })

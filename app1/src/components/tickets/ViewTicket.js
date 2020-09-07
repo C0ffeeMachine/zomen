@@ -9,7 +9,7 @@ function ViewTicket() {
     const [tickets,setTicket]= useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/tickets")  //http://localhost:3005/ticket
+        axios.get("/tickets")  //http://localhost:3005/ticket
         .then(res =>{
             console.log(res.data)
             setTicket(res.data)
@@ -17,14 +17,14 @@ function ViewTicket() {
     },[])
 
     const loadTicket = () =>{
-        axios.get("http://localhost:8080/tickets")  //http://localhost:3005/ticket
+        axios.get("/tickets")  //http://localhost:3005/ticket
         .then(res =>{
             setTicket(res.data)
         })
     }
 
     const deleteUser = id =>{
-        axios.delete("http://localhost:8080/tickets/"+id) //http://localhost:3005/ticket/
+        axios.delete("/tickets/"+id) //http://localhost:3005/ticket/
         .then(res=>{
             loadTicket();
         })

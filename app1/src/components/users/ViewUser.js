@@ -9,7 +9,7 @@ function ViewUser() {
     const [users,setUser] = useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/users") //http://localhost:3005/users
+        axios.get("/users") //http://localhost:3005/users
         .then(res =>{
             console.log(res.data)
             setUser(res.data)
@@ -18,14 +18,14 @@ function ViewUser() {
     },[])
 
     const loadUser = () =>{
-        axios.get("http://localhost:8080/users") //http://localhost:3005/users
+        axios.get("/users") //http://localhost:3005/users
         .then(res =>{
             setUser(res.data)
         })
     }
 
     const deleteUser = id =>{
-        axios.delete("http://localhost:8080/users/"+id)
+        axios.delete("/users/"+id)
         .then(res=>{
             loadUser();
         })

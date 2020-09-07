@@ -30,7 +30,7 @@ function EditTicket() {
     },[])
 
     const loadTicket = ()=>{
-        axios.get("http://localhost:8080/tickets/"+id) //"http://localhost:3005/ticket/"
+        axios.get("/tickets/"+id) //"http://localhost:3005/ticket/"
         .then(res=>{
             setTicket(res.data)
         })
@@ -46,7 +46,7 @@ function EditTicket() {
 
     const onSubmit = (e) =>{
         e.preventDefault()
-        axios.put("http://localhost:8080/tickets/"+id,ticket)
+        axios.put("/tickets/"+id,ticket)
         .then(res=>{
             console.log(res.data)
             history.push("/viewtickets")

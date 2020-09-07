@@ -31,7 +31,7 @@ function EditUser() {
 
     const onSubmit = e =>{
         e.preventDefault()
-        axios.put("http://localhost:8080/users/"+id,user) //http://localhost:3005/users
+        axios.put("/users/"+id,user) //http://localhost:3005/users
         .then(res =>{
             console.log(res)
             history.push("/viewusers")
@@ -39,7 +39,7 @@ function EditUser() {
     }
 
     const loadUser = () =>{
-        axios.get("http://localhost:8080/users/"+id) //http://localhost:3005/users
+        axios.get("/users/"+id) //http://localhost:3005/users
         .then(res =>{
             setUser(res.data)
         })

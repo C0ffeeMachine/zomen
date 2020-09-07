@@ -9,7 +9,7 @@ function UserInfo() {
     const {mobile} = useParams()
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/users/info/"+mobile) //http://localhost:3005/users?mobNumber=
+        axios.get("/users/info/"+mobile) //http://localhost:3005/users?mobNumber=
         .then((res) => {
             setUser(res.data)
             console.log(res.data)
