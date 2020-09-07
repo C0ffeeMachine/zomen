@@ -18,7 +18,7 @@
 
 *Application will run at port 8080(localhost)*
 
-A nice detailed **documentation** of the apis can be found at [Swagger Documentation](https://github.com/C0ffeeMachine/zomen/blob/master/img/Swagger%20UI.pdf)
+A nice detailed **documentation** of the apis can be found at [Swagger Documentation](http://3.20.147.192:8080/swagger-ui.html)
 I have used [swagger](https://swagger.io/) to prepare this documentation. You can also hit apis using this documentation page and get response.
 
 ## Results
